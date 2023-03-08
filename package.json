@@ -1,0 +1,20 @@
+{
+  "name": "bot-development",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/bot.js",
+  "scripts": {
+    "test": "node ."
+  },
+  "author": "NotTheRightGuy",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/rest": "^1.5.0",
+    "discord-api-types": "^0.37.35",
+    "discord.js": "^14.7.1",
+    "dotenv": "^16.0.3",
+    "env": "^0.0.2",
+    "eslint": "^8.35.0",
+    "node-cron": "^3.0.2"
+  }
+}
