@@ -1,7 +1,7 @@
 const cron = require("node-cron");
 require("dotenv").config();
 const { Events, EmbedBuilder } = require("discord.js");
-CHANNEL_ID = process.env.CHANNEL_ID;
+CHANNEL_ID = process.env.POTD;
 const today = new Date();
 const { exec } = require("child_process");
 
@@ -10,7 +10,7 @@ module.exports = {
     once: true,
     async execute(client) {
         const POTD = client.channels.cache.get(CHANNEL_ID);
-        cron.schedule("30 17 * * *", () => {
+        cron.schedule("*/1 * * * *", () => {
             exec("cd src//scrapper && node index.js", (err, stdout, stderr) => {
                 if (err) {
                     console.error("exec error");

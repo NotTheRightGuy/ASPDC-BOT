@@ -5,10 +5,13 @@ module.exports = {
     async execute(interaction) {
         if (!interaction.isCommand()) return;
 
+        const interactionUser = interaction.user.tag;
         const command = interaction.client.commands.get(
             interaction.commandName
         );
-
+        console.log(
+            `${interactionUser} issued the command ${interaction.commandName}`
+        );
         if (!command) {
             console.error(
                 `No Command matching ${interaction.commandName} was found`
