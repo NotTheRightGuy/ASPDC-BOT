@@ -10,7 +10,7 @@ module.exports = {
     once: true,
     async execute(client) {
         const POTD = client.channels.cache.get(CHANNEL_ID);
-        cron.schedule("30 06 * * *", () => {
+        cron.schedule("30 17 * * *", () => {
             exec("cd src//scrapper && node index.js", (err, stdout, stderr) => {
                 if (err) {
                     console.error("exec error");
