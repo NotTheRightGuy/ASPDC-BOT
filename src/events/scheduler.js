@@ -47,7 +47,7 @@ module.exports = {
         console.log(`Started Cron Scheduler\n1.Leetcode POTD -> 6:30AM ITC`);
         cron.schedule("*/30 * * * * *", () => {
             console.log("Running a task every 1 minute");
-            exec("py src\\scripts\\leetcodeScrapper.py", (err, stdout) => {
+            exec("python src\\scripts\\leetcodeScrapper.py", (err, stdout) => {
                 if (err) {
                     console.error(err);
                 } else {
